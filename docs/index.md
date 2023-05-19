@@ -5,11 +5,11 @@ sidebar: false
 
 hero:
   name: SafeBin
-  text: Armazenamento encriptado e não indexado
+  text: Armazenamento encriptado e não relacional
   tagline: em um aplicativo de gerenciador de senhas
   image:
     src: /image/fluentui-emoji/wastebasket-shield-3d-merged.png
-    alt: VitePress
+    alt: SafeBin
 
   actions:
     - theme: brand
@@ -23,30 +23,29 @@ hero:
       link: /deploy/
 
 features:
-  - icon: 📑
-    title: Público e não indexado
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - icon: 📖
-    title: Autenticação sem senhas
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - icon: 🥰
-    title: 
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🔍
+    title: Armazenamento aberto
+    details: Se você souber os endereços certos, pode acessar todos os dados da base. Porém, se não tiver as chaves necessárias, não será capaz de ler nada, como se estivesse trancado para você.
+    linkText: Saiba mais
+    link: "#"
+  - icon: 🔓
+    title: Nada de senhas
+    details: Você pode ler e escrever dados à vontade, sem precisar de senha. Mas se quiser modificar ou apagar alguma coisa, vai precisar da chave que criou aquela informação.
+    linkText: Saiba mais
+    link: "#"
+  - icon: 🔗
+    title: Dados não relacionados
+    details: Para utilizar o serviço, é necessário registrar sua chave pública. Mas, relaxa, ninguém consegue associar os dados diretamente a você, a não ser que conheçam a lógica específica de como tudo foi organizado.
+    linkText: Saiba mais
+    link: "#"
 ---
 
 ## Como funciona
 
-A proposta do projeto visa o desenvolvimento de um gerenciador de senha que
-permita aos usuários armazenar localmente o índice de suas senhas por meio de um
-cliente front-end com ferramentas básicas. A interface visual desenvolvida
-deverá possibilitar a busca por senhas armazenadas no servidor por meio de uma
-API RESTful, mantendo o anonimato do usuário e a segurança dos dados por meio da
-criptografia. O servidor não terá conhecimento de informações relacionadas às
-senhas, tais como sua propriedade ou aplicação, e todo o processo de
-armazenamento e recuperação de senhas será criptografado. Somente o cliente terá
-a capacidade de atribuir significado à chave armazenada, garantindo a mínima
-segurança e privacidade dos dados do usuário.
+É uma aplicação em núvem que provê o armazenamento seguro de dados
+criptografados. Através da AWS, é implementado uma API RESTful com os serviços
+API Gateway e Lambda que processa os dados já criptografados pelo cliente e armazena em uma
 
-```sh
-echo "Hello World!"
-```
+<ImgZoom src="/image/aws-diagram.png" alt="Diagrama de serviços da Amazon">
+    Diagrama de serviços da Amazon
+</ImgZoom>
