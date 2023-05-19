@@ -1,10 +1,10 @@
 [Rodolfo Avelino, Dr.](https://www.rodolfoavelino.com.br/). Computação em Nuvem. [Insper](https://github.com/Insper), 2023.
 
-# 🔐 Crypto Password Manager
+# SafeBin
 
-[![Deploy](https://github.com/FelixLuciano/crypto-passman/actions/workflows/deploy.yml/badge.svg)](https://github.com/FelixLuciano/crypto-passman/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/FelixLuciano/safe-bin/actions/workflows/deploy.yml/badge.svg)](https://github.com/FelixLuciano/safe-bin/actions/workflows/deploy.yml)
 
-[Abrir relatório](https://github.lucianofelix.com.br/crypto-passman/)
+[Abrir relatório](https://github.lucianofelix.com.br/safe-bin/)
 
 ## Executando localmente
 
