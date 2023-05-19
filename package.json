@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "medium-zoom": "^1.0.8",
     "vitepress": "^1.0.0-alpha.75"
   },
   "scripts": {
