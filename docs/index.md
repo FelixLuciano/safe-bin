@@ -4,11 +4,11 @@ layout: home-doc
 sidebar: false
 
 hero:
-  name: "Crypto Password Manager"
-  text: "com KMS da Amazon Web Services"
-  tagline: Como criar o seu gerenciador de senhas não indexado na AWS
+  name: SafeBin
+  text: Armazenamento encriptado e não indexado
+  tagline: em um aplicativo de gerenciador de senhas
   image:
-    src: /image/fluentui-emoji/locked_with_key.png
+    src: /image/fluentui-emoji/wastebasket-shield-3d-merged.png
     alt: VitePress
 
   actions:

@@ -2,15 +2,15 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/crypto-passman/",
+  base: "/safe-bin/",
 
-  title: "Crypto Password Manager",
-  logo: "/image/fluentui-emoji/locked_with_key.png",
+  title: "SafeBin",
+  logo: "/image/fluentui-emoji/wastebasket-shield-3d-merged.png",
 
   description: "Como criar o seu gerenciador de senhas não indexado com Amazon Web Services",
 
   head: [
-    ['link', { rel: 'icon', href: "/crypto-passman/image/fluentui-emoji/locked_with_key.png" }],
+    ['link', { rel: 'icon', href: "/safe-bin/image/fluentui-emoji/wastebasket-shield-3d-merged.png" }],
   ],
 
   themeConfig: {
@@ -76,7 +76,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/felixLuciano/crypto-passman'
+        link: 'https://github.com/felixLuciano/safe-bin'
       }
     ],
 
