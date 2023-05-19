@@ -1,5 +1,5 @@
 ---
-title: inicio
+title: Início
 layout: home-doc
 sidebar: false
 
@@ -12,10 +12,13 @@ hero:
     alt: VitePress
 
   actions:
+    - theme: brand
+      text: Abrir aplicativo
+      link: /app/
     - theme: alt
       text: Como funciona
       link: "#como-funciona"
-    - theme: brand
+    - theme: alt
       text: Crie o seu
       link: /deploy/
 
@@ -33,21 +36,17 @@ features:
 
 ## Como funciona
 
-Lorem ipsum dolor sit amet takimata dolore dolor lobortis. Sed sea at no
-sadipscing invidunt molestie nostrud. Sed ut velit et iriure ea ut. Sit duis
-consetetur sit eu diam te lorem.
+A proposta do projeto visa o desenvolvimento de um gerenciador de senha que
+permita aos usuários armazenar localmente o índice de suas senhas por meio de um
+cliente front-end com ferramentas básicas. A interface visual desenvolvida
+deverá possibilitar a busca por senhas armazenadas no servidor por meio de uma
+API RESTful, mantendo o anonimato do usuário e a segurança dos dados por meio da
+criptografia. O servidor não terá conhecimento de informações relacionadas às
+senhas, tais como sua propriedade ou aplicação, e todo o processo de
+armazenamento e recuperação de senhas será criptografado. Somente o cliente terá
+a capacidade de atribuir significado à chave armazenada, garantindo a mínima
+segurança e privacidade dos dados do usuário.
 
-Vero et et tempor veniam ea velit invidunt sanctus amet amet elit et rebum. Ut
-invidunt et ipsum elitr vel stet voluptua et tempor diam sed luptatum ad dolores
-justo facilisis at in. Dolor eum est et at rebum sanctus. Diam quis dolore
-vulputate lorem eirmod diam est sanctus quod iriure ut et. Nonumy blandit at.
-
-Qui kasd diam ut sanctus assum nulla sadipscing sanctus feugiat autem wisi diam
-elit eirmod invidunt vulputate. Amet ipsum diam ipsum stet nonummy invidunt
-commodo amet. Te nisl tempor amet facilisi eos accusam no delenit rebum diam
-ipsum facilisi facilisis. Vero facilisi erat dolore dolor amet sea dolore
-aliquyam no nonumy vel ea ipsum rebum lorem sea hendrerit. Dolore labore clita
-et sea dolor no feugait voluptua vero kasd sit lorem. Blandit nonumy eirmod
-takimata nulla dolor. Amet invidunt accumsan. Duo id sanctus ea et rebum ipsum
-nulla takimata aliquyam tempor clita et accusam erat tempor. Consequat ipsum
-lorem sea volutpat dolor ea no.
+```sh
+echo "Hello World!"
+```

@@ -17,6 +17,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
+        text: 'App',
+        link: '/app/'
+      }, {
         text: 'Insper',
         items: [
           {
@@ -82,11 +85,26 @@ export default defineConfig({
 
     outline: 'deep',
     outlineTitle: 'Tópicos',
+
+    lastUpdatedText: 'Updated Date',
+
+    docFooter: {
+      prev: 'Página anterior',
+      next: 'Próxima página'
+    },
+
+    darkModeSwitchLabel: 'Aparência',
+    returnToTopLabel: 'Voltar para o topo',
+    langMenuLabel: 'Mudar idioma',
   
     footer: {
       message: 'Publicado sob a Licença MIT.<br/>Icones por <a href="https://github.com/microsoft/fluentui-emoji">microsoft/fluentui-emoji</a>.',
       copyright: 'Copyright © 2023'
-    }
+    },
+  },
+
+  markdown: {
+    lineNumbers: true,
   },
 
   locales: {
