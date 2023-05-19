@@ -1,5 +1,6 @@
 ---
 title: App
+titleTemplate: SafePass
 sidebar: false
 # layout: page
 hero: true
@@ -7,8 +8,10 @@ prev: false
 next: false
 ---
 
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+<VPDocHero
+    class="VPDocHero"
+    name="SafePass"
+    text="Gerencie suas senhas"
+    tagline="Crie, salve e gerencie suas senhas para que você possa fazer login em sites e apps com facilidade."
+    image="/image/fluentui-emoji/locked_with_key.png"
+/>
