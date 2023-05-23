@@ -95,6 +95,42 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+/**
+ * Component: Winsows code-group
+ * -------------------------------------------------------------------------- */
+
+.vp-code-group--windows > .tabs {
+  padding-left: 5.25rem;
+  position: relative;
+}
+.vp-code-group--windows > .tabs > div:nth-child(1),
+.vp-code-group--windows > .tabs > div:nth-child(2),
+.vp-code-group--windows > .tabs > div:nth-child(3) {
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background-color: #ed7a5f;
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+}
+.vp-code-group--windows > .tabs > div:nth-child(2) {
+  background-color: #eddb5b;
+  left: 2.5rem;
+}
+.vp-code-group--windows > .tabs > div:nth-child(3) {
+  background-color: #39ebab;
+  left: 4rem;
+}
+.vp-code-group--windows > .tabs > label {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+/**
+ * Others
+ * -------------------------------------------------------------------------- */
+
 main .VPHero {
   padding-left: 0 !important;
   padding-right: 0 !important;

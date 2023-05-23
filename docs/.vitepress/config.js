@@ -104,7 +104,9 @@ export default defineConfig({
   },
 
   markdown: {
-    lineNumbers: true,
+    config(md) {
+      md.use(...createWindowsGroup())
+    },
   },
 
   locales: {
