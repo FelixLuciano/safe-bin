@@ -2,7 +2,7 @@
 title: App
 titleTemplate: SafePass
 sidebar: false
-# layout: page
+aside: false
 hero: true
 prev: false
 next: false
