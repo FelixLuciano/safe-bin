@@ -9,7 +9,7 @@ next: false
 ---
 
 <VPDocHero
-    class="VPDocHero"
+    class="VPDocHero VPDocHero--small-image"
     name="SafePass"
     text="Gerencie suas senhas"
     tagline="Crie, salve e gerencie suas senhas para que você possa fazer login em sites e apps com facilidade."
