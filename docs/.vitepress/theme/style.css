@@ -109,17 +109,17 @@
   width: .7rem;
   height: .7rem;
   border-radius: 50%;
-  background-color: #ed7a5f;
+  background-color: #f87171;
   position: absolute;
   left: 1rem;
   top: 1.2rem;
 }
 .vp-code-group--windows > .tabs > div:nth-child(2) {
-  background-color: #eddb5b;
+  background-color: #fbbf24;
   left: 2.5rem;
 }
 .vp-code-group--windows > .tabs > div:nth-child(3) {
-  background-color: #39ebab;
+  background-color: #34d399;
   left: 4rem;
 }
 .vp-code-group--windows > .tabs > label {
