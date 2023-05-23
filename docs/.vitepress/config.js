@@ -91,7 +91,7 @@ export default defineConfig({
   
     footer: {
       message: 'Publicado sob a Licença MIT.<br/>Icones por <a href="https://github.com/microsoft/fluentui-emoji">microsoft/fluentui-emoji</a>.',
-      copyright: 'Copyright © 2023'
+      copyright: 'Copyright © 2023 Luciano Felix'
     },
   },
 
