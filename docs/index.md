@@ -23,17 +23,23 @@ hero:
       link: /deploy/
 
 features:
-  - icon: 🔍
+  - icon:
+      src: /image/fluentui-emoji/magnifyingglass-tilted-left-3d.png
+      alt: Lente de almento inclinada para a esquerda
     title: Armazenamento aberto
     details: Se você souber os endereços certos, pode acessar todos os dados da base. Porém, se não tiver as chaves necessárias, não será capaz de ler nada, como se estivesse trancado para você.
     linkText: Saiba mais
     link: "#"
-  - icon: 🔓
+  - icon:
+      src: /image/fluentui-emoji/unlocked-3d.png
+      alt: Cadeado destrancado
     title: Nada de senhas
     details: Você pode ler e escrever dados à vontade, sem precisar de senha. Mas se quiser modificar ou apagar alguma coisa, vai precisar da chave que criou aquela informação.
     linkText: Saiba mais
     link: "#"
-  - icon: 🔗
+  - icon:
+      src: /image/fluentui-emoji/linked-paperclips-3d.png
+      alt: Clips de papel entrelaçados
     title: Dados não relacionados
     details: Para utilizar o serviço, é necessário registrar sua chave pública. Mas, relaxa, ninguém consegue associar os dados diretamente a você, a não ser que conheçam a lógica específica de como tudo foi organizado.
     linkText: Saiba mais
