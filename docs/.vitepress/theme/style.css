@@ -15,11 +15,11 @@
   --vp-c-brand-dark: #0284c7;
   --vp-c-brand-darker: #0369a1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
-  --vp-c-brand-accent: #7e22ce;
+  --vp-c-brand-accent: #9333ea;
 }
 
 ::selection {
-  background-color: rgba(100 108 255 / .75);
+  background-color: rgba(14 165 233 / .75);
   color: #000000
 }
 
@@ -51,15 +51,15 @@
     var(--vp-c-brand)
   );
 
-  --vp-home-hero-image-background-image: linear-gradient(
+  /* --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
     var(--vp-c-brand-accent) 50%,
     var(--vp-c-brand-light) 50%
   );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(40px); */
 }
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   :root {
     --vp-home-hero-image-filter: blur(56px);
   }
@@ -69,7 +69,7 @@
   :root {
     --vp-home-hero-image-filter: blur(72px);
   }
-}
+} */
 
 /**
  * Component: Custom Block
@@ -138,4 +138,21 @@ main .VPHero {
 
 .aside-curtain {
   display: none;
+}
+
+.VPDocHero a.VPButton:not([href]) {
+  padding: 0;
+  color: initial;
+}
+.VPDocHero a.VPButton:not([href]):hover {
+  text-decoration: none;
+}
+.VPDocHero--small-image .VPImage{
+  width: 8rem;
+}
+.VPDocHero--medium-image .VPImage{
+  width: 10rem;
+}
+.VPDocHero--large-image .VPImage{
+  width: 12rem;
 }

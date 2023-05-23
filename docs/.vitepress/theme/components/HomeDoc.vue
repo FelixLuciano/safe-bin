@@ -26,10 +26,6 @@ import VPHomeFeatures from 'vitepress/dist/client/theme-default/components/VPHom
     padding-top: 0;
 }
 
-.VPDocHero .VPImage{
-  width: 128px;
-}
-
 @keyframes bounce {
   /* Source: https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/bounce.css */
   from, 20%, 53%, to {
