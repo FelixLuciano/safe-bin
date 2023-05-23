@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { createWindowsGroup } from './plugins/markdown/windows-container.ts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -20,17 +21,8 @@ export default defineConfig({
         text: 'App',
         link: '/app/'
       }, {
-        text: 'Insper',
-        items: [
-          {
-            text: 'Página Institucional',
-            link: 'https://www.insper.edu.br/'
-          },
-          {
-            text: 'Computação em Nuvem',
-            link: 'https://insper.github.io/computacao-nuvem/'
-          },
-        ],
+        text: 'Sobre',
+        link: '/sobre'
       },
     ],
 
