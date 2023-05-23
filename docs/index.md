@@ -2,6 +2,7 @@
 title: Início
 layout: home-doc
 sidebar: false
+aside: false
 
 hero:
   name: SafeBin
