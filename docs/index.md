@@ -21,7 +21,7 @@ hero:
       link: "#como-funciona"
     - theme: alt
       text: Crie o seu
-      link: /deploy/
+      link: /deploy
 
 features:
   - icon:

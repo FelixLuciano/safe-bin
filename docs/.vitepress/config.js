@@ -4,6 +4,7 @@ import { createWindowsGroup } from './plugins/markdown/windows-container.ts'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/safe-bin/",
+  cleanUrls: true,
 
   title: "SafeBin",
   logo: "/image/fluentui-emoji/wastebasket-shield-3d-merged.png",
@@ -62,7 +63,7 @@ export default defineConfig({
             link: '/'
           }, {
             text: 'Crie o seu',
-            link: '/deploy/'
+            link: '/deploy'
           }
         ]
       }
