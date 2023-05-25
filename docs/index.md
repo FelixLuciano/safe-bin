@@ -7,7 +7,7 @@ aside: false
 hero:
   name: SafeBin
   text: Armazenamento encriptado e não relacional
-  tagline: em um aplicativo de gerenciador de senhas
+  tagline: em um aplicativo gerenciador de senhas
   image:
     src: /image/fluentui-emoji/wastebasket-shield-3d-merged.png
     alt: SafeBin
@@ -21,7 +21,7 @@ hero:
       link: "#como-funciona"
     - theme: alt
       text: Crie o seu
-      link: /deploy
+      link: /do-it-yourself/getting-started
 
 features:
   - icon:
@@ -39,6 +39,10 @@ features:
       alt: Clips de papel entrelaçados
     title: Dados não relacionados
     details: Para utilizar o serviço, é necessário registrar sua chave pública. Mas, relaxa, ninguém consegue associar os dados diretamente a você, a não ser que conheçam a lógica específica de como tudo foi organizado.
+
+next:
+  text: 'Crie o seu'
+  link: '/do-it-yourself/getting-started'
 ---
 
 ## Como funciona

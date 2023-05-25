@@ -56,14 +56,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Crie o seu',
         items: [
           {
-            text: 'Início',
-            link: '/'
+            text: 'Primeiros passos',
+            link: '/do-it-yourself/getting-started'
           }, {
-            text: 'Crie o seu',
-            link: '/deploy'
+            text: 'Infraestrutura como Código',
+            link: '/do-it-yourself/deploy'
           }
         ]
       }

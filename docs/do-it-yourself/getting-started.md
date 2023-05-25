@@ -1,7 +1,9 @@
 ---
-title: Tutorial
-sidebar: false
+title: Primeiros passos
 hero: true
+prev:
+  text: 'Como funciona'
+  link: '/#como-funciona'
 ---
 
 <VPDocHero
@@ -35,7 +37,7 @@ hero: true
 - Possuir uma função para o Lambda.
   [Saiba mais](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html).
 
-## Primeiros passos
+## Ambiente de desenvolvimento
 
 Antes de começar a desenvolver projetos com Infraestrutura como Código (IaC), é
 necessário configurar o ambiente de desenvolvimento. Neste projeto, utilizaremos
@@ -86,34 +88,5 @@ o funcionamento e a segurança ao trabalhar com Infraestrutura como Código.
 Certifique-se de seguir as instruções fornecidas pelos desenvolvedores do
 Terraform e da AWS-cli para uma configuração adequada em seu sistema
 operacional.
-
-:::
-
-## Começando
-
-[Terraform AWS Lambda function](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)
-
-
-::: windows-group
-
-```sh [shell]
-$ cd terraform
-```
-
-:::
-
-::: windows-group
-
-```sh [shell]
-$ terraform plan -out .tfplan
-```
-
-:::
-
-::: windows-group
-
-```sh [shell]
-$ terraform apply .tfplan
-```
 
 :::
