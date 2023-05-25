@@ -128,18 +128,13 @@
 }
 
 /**
- * Others
+ * Component: Document Hero
  * -------------------------------------------------------------------------- */
 
-main .VPHero {
+.VPDocHero {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
-.aside-curtain {
-  display: none;
-}
-
 .VPDocHero a.VPButton:not([href]) {
   padding: 0;
   color: initial;
@@ -155,4 +150,12 @@ main .VPHero {
 }
 .VPDocHero--large-image .VPImage{
   width: 12rem;
+}
+
+/**
+ * Others
+ * -------------------------------------------------------------------------- */
+
+.aside-curtain {
+  display: none;
 }
