@@ -18,7 +18,7 @@ const zoomSrc = computed(() => withBase(props.src))
 const zoom: Ref<Zoom> = ref(mediumZoom())
 
 function open() {
-    zoom?.open()
+    zoom.value?.open()
 }
 
 onMounted(() => {
@@ -36,7 +36,7 @@ onMounted(() => {
         <figcaption>
             <slot />
         </figcaption>
-        <div class="hint">Clique para ampliar</div>
+        <p class="hint">Clique para ampliar</p>
     </figure>
 </template>
 
@@ -62,6 +62,7 @@ figcaption {
 }
 
 .hint {
+    margin: 0;
     color: var(--vp-c-text-2);
     font-weight: thin;
     font-style: italic;
