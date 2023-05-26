@@ -13,6 +13,6 @@ prev:
     name="Documentação"
     text="API RESTful"
     tagline="Estrutura de rotas e dados"
-    image="/image/fluentui-emoji/cloud.png"
+    image="/image/fluentui-emoji/gear-3d.png"
 />
 
