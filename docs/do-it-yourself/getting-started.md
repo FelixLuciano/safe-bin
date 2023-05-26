@@ -32,10 +32,6 @@ prev:
 
 - Possuir uma conta na AWS com acesso ao console.
   [Saiba mais](https://repost.aws/knowledge-center/create-and-activate-aws-account).
-- Possuir um keypair de um usuário IAM.
-  [Saiba mais](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).
-- Possuir uma função para o Lambda.
-  [Saiba mais](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html).
 
 ## Ambiente de desenvolvimento
 
@@ -90,3 +86,21 @@ Terraform e da AWS-cli para uma configuração adequada em seu sistema
 operacional.
 
 :::
+
+### Docker
+
+Docker é uma plataforma de código aberto que permite a criação, implantação e execução de aplicativos em contêineres. Os contêineres são como máquinas virtuais leves que permitem que os desenvolvedores embalem e distribuam facilmente seus aplicativos junto com todas as dependências necessárias. Isso garante que o aplicativo funcione de forma consistente em qualquer ambiente, independentemente de diferenças entre sistemas operacionais ou configurações. O Docker será utilizado com uma container semelhante ao sistema utilizado na nuvem, para gerar o pacote de bibliotecas que utilizado pelo serviço em produção.
+
+Existem várias maneiras de instalar o Docker, mas uma forma geral de fazê-lo é a partir do [tutorial oficial](https://www.docker.com/get-started) específico para seu sistema operacional no site oficial do Docker
+
+Após a instalação, já é possível fazer construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquivo do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte comando:
+
+::: windows-group
+
+```sh [Bash]
+$ docker-compose up --build
+```
+
+:::
+
+Agora, o ambiente de desenvolvimento está completo para a criação da infraestrutura na nuvem.

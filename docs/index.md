@@ -47,10 +47,47 @@ next:
 
 ## Como funciona
 
-É uma aplicação em núvem que provê o armazenamento seguro de dados
-criptografados. Através da AWS, é implementado uma API RESTful com os serviços
-API Gateway e Lambda que processa os dados já criptografados pelo cliente e armazena em uma
+SafeBin é uma Infraestrutura de armazenamento, em que uma API RESTful realiza
+operações em um banco de dados do tipo chave-valor. Além disso, está atrelada a
+infraestrutura um esquema de criptografia por chaves simétricas que gera chaves
+para os usuários e realiza as autorização de modificações no banco de dados. E
+este é um serviço agnóstica de finalidade, diversos usuários podem fazer usos
+dela. Tudo com segurança e praticidade. Então, como prova de conceito, foi
+implementado um gerenciador de senhas utilizando este serviço.
+
+Primeiramente, os clientes requisitam ao serviço que envie um par de chaves para
+a encriptação dos dados que serão armazenados futuramente. Este par de chaves é
+composto por um segredo que o cliente utilizará para encriptar seus dados, e uma
+cifra que consiste na própria no próprio segredo que foi encriptado pela chave
+mesta do servidor. Isso permite que o cliente envie dados que podem ter a
+autoria verificada pelo servidor de maneira segura, expondo a chave secreta
+apenas na primeira solicitação.
+
+Após obter as chaves, o cliente pode fazer escritas no banco de dados, basta um
+índice único e o dado encriptado com a chave secreta, ficando a critério do
+cliente definir o índice. Leituras e escritas acontecem de modo irrestrito, ou
+seja, qualquer cliente pode ler e esquever qualquer item da base de dados,
+contanto que tenha um índice existente ou que este esteja disponível,
+respectivamente. Então, os dados são armazenados e retornados encriptados, do
+modo como foram enviados.
+
+Já, para realizar a modificação dos dados existentes, é preciso fazer a
+autenticação da solicitação. Para isso, é enviado junto dela, a chave cifrada
+que foi obtida inicialmente. O servidor será capaz de utilizá-la para obter a
+chave secreta utilizada pelo cliente, e assim verificar os dados na solicitação
+e no item solicitado. Caso seija feita a validação, a operação é autorizada e o
+item é atualizado ou deletado da base de dados.
 
 <ImgZoom src="/image/aws-diagram.png" alt="Diagrama de serviços da Amazon">
     Diagrama de serviços da Amazon
 </ImgZoom>
+
+Este projeto é uma Infraestrutura como Código (IaC) baseado nos serviços da AWS
+que utiliza a plataforma do Terraform para fazer a construção da infraestrutura
+de modo automatizado. A infraestrutura utiliza dos seguintes serviços: Métodos
+do AWS API Gateway para fazer a invocação de funções AWS Lambda; Que por sua
+vez, utiliza o cliente AWS KMS para fazer o fornecimento de chaves aos clientes
+e autenticação das solicitações e utiliza o serviço DynamoDB para fazer o
+armazenamento dos dados criptografados.
+
+Há mais detalhes da infraestrutura no guia de implementação do serviço.
