@@ -1,19 +1,68 @@
 {
-  "hash": "11d02062",
-  "browserHash": "1c51d869",
+  "hash": "2ed408a7",
+  "browserHash": "6f0a51b8",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "2d97fce0",
+      "fileHash": "3943e75c",
+      "needsInterop": false
+    },
+    "@formkit/vue": {
+      "src": "../../../../node_modules/@formkit/vue/dist/index.mjs",
+      "file": "@formkit_vue.js",
+      "fileHash": "6b01d8a9",
       "needsInterop": false
     },
     "medium-zoom": {
       "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "fe3f82be",
+      "fileHash": "8f9fb23b",
       "needsInterop": false
+    },
+    "@formkit/i18n": {
+      "src": "../../../../node_modules/@formkit/i18n/dist/index.mjs",
+      "file": "@formkit_i18n.js",
+      "fileHash": "413dd50c",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "a62198b7",
+      "needsInterop": false
+    },
+    "vue3-toastify": {
+      "src": "../../../../node_modules/vue3-toastify/dist/esm/index.js",
+      "file": "vue3-toastify.js",
+      "fileHash": "0dabc79f",
+      "needsInterop": false
+    },
+    "crypto-js/sha1": {
+      "src": "../../../../node_modules/crypto-js/sha1.js",
+      "file": "crypto-js_sha1.js",
+      "fileHash": "cc03eb33",
+      "needsInterop": true
+    },
+    "crypto-js": {
+      "src": "../../../../node_modules/crypto-js/index.js",
+      "file": "crypto-js.js",
+      "fileHash": "2b4c5111",
+      "needsInterop": true
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-6BK2IDNR": {
+      "file": "chunk-6BK2IDNR.js"
+    },
+    "chunk-QH2LEIYP": {
+      "file": "chunk-QH2LEIYP.js"
+    },
+    "chunk-5T7GL4E2": {
+      "file": "chunk-5T7GL4E2.js"
+    },
+    "chunk-F4AF7QOS": {
+      "file": "chunk-F4AF7QOS.js"
+    }
+  }
 }

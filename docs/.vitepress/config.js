@@ -21,6 +21,10 @@ export default defineConfig({
       {
         text: 'App',
         link: '/app/'
+      }, 
+      {
+        text: 'API',
+        link: '/api/'
       }, {
         text: 'Sobre',
         link: '/sobre'
@@ -54,20 +58,93 @@ export default defineConfig({
       }
     },
 
-    sidebar: [
-      {
-        text: 'Crie o seu',
-        items: [
-          {
-            text: 'Primeiros passos',
-            link: '/do-it-yourself/getting-started'
-          }, {
-            text: 'Infraestrutura como Código',
-            link: '/do-it-yourself/deploy'
-          }
-        ]
-      }
-    ],
+    sidebar: {
+      '/api/': [
+        {
+          text: 'Documentação',
+          items: [
+            {
+              text: 'Início',
+              link: '/api/'
+            }, {
+              text: '/key',
+              collapsed: true,
+              items: [
+                {
+                  text: 'Read',
+                  link: '/api/key/read'
+                },
+              ]
+            }, {
+              text: '/data',
+              collapsed: true,
+              items: [
+                {
+                  text: 'Read',
+                  link: '/api/data/read'
+                },
+              ]
+            }, {
+              text: '/data/{key_id}',
+              collapsed: true,
+              items: [
+                {
+                  text: 'Create',
+                  link: '/api/data/key_id/create'
+                }, {
+                  text: 'Read',
+                  link: '/api/data/key_id/read'
+                }, {
+                  text: 'Update',
+                  link: '/api/data/key_id/update'
+                }, {
+                  text: 'Delete',
+                  link: '/api/data/key_id/delete'
+                },
+              ]
+            }
+          ]
+        }
+      ],
+      '/do-it-yourself/': [
+        {
+          text: 'Crie o seu',
+          items: [
+            {
+              text: 'Primeiros passos',
+              link: '/do-it-yourself/getting-started'
+            }, {
+              text: 'Infraestrutura como Código',
+              link: '/do-it-yourself/deploy'
+            }
+          ]
+        }
+      ],
+      '/app/': [
+        {
+          text: 'ATENÇÃO!',
+          items: [
+            {
+              text: 'Apesar da capacidade da infraestrutura em gerenciar o armazenamento criptografado em nuvem, este aplicativo não oferece a segurança adequada para os dados armazenados localmente. Portanto, é altamente desaconselhável utilizar essa aplicação para guardar senhas pessoais ou qualquer informação sensível. Além disso, evite o uso de serviços de terceiros não confiáveis.'
+            },
+          ]
+        },
+        {
+          items: [
+            {
+              text: '📂 Importar senhas',
+              link: '/app/#js-import'
+            }, {
+              text: '📦 Exportar senhas',
+              link: '/app/#js-export'
+            }, {
+              text: '🔑 Definir segredos',
+              link: '/app/secret'
+            },
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       {
