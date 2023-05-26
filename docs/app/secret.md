@@ -59,6 +59,7 @@ async function updateSecrets() {
   class="VPDocHero VPDocHero--small-image"
   name="Segredo"
   tagline="Estas são suas chaves de encriptação. Sem elas, nada funciona. Então guarde-as em segurança."
+  image="/image/fluentui-emoji/warning-3d.png"
 />
 
 
