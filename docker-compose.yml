@@ -1,0 +1,10 @@
+name: 'aws-lambda-sam'
+version: '3'
+
+services:
+  lambda:
+    image: public.ecr.aws/sam/build-python3.9
+    volumes:
+      - ./requirements.txt:/var/task/requirements.txt
+      - .build/layer:/var/task/output
+    command: /bin/sh -c "pip install -r requirements.txt -t /var/task/output/python/lib/python3.9/site-packages/"
