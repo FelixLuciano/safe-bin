@@ -7,25 +7,25 @@ prev:
 ---
 
 <VPDocHero
-    class="VPDocHero VPDocHero--medium-image"
-    name="Tutorial"
-    text="Como criar o seu o seu"
-    tagline="E fazer o deploy na AWS"
-    image="/image/fluentui-emoji/rocket.png"
-    :actions="[
-        {
-            theme: 'alt',
-            text:'Baixe os arquivos',
-            link:'https://github.com/FelixLuciano/safe-bin/archive/refs/heads/main.zip'
-        }, {
-            theme: 'false',
-            text:'OU'
-        }, {
-            theme: 'alt',
-            text:'Clone o repositório',
-            link:'https://github.com/felixLuciano/safe-bin/fork'
-        }
-    ]"
+  class="VPDocHero VPDocHero--medium-image"
+  name="Tutorial"
+  text="Como criar o seu o seu"
+  tagline="E fazer o deploy na AWS"
+  image="/image/fluentui-emoji/rocket.png"
+  :actions="[
+    {
+      theme: 'alt',
+      text:'Baixe os arquivos',
+      link:'https://github.com/FelixLuciano/safe-bin/archive/refs/heads/main.zip'
+    }, {
+      theme: 'false',
+      text:'OU'
+    }, {
+      theme: 'alt',
+      text:'Clone o repositório',
+      link:'https://github.com/felixLuciano/safe-bin/fork'
+    }
+  ]"
 />
 
 ## Requisitos mínimos
