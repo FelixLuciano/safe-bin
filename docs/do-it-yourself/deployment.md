@@ -179,10 +179,10 @@ resource "aws_iam_role_policy_attachment" "lambda_dynamodb_policy_attachment" {
 
 :::
 
-## Serviço DynamoDB
+## Serviço Amazon DynamoDB
 
 O armazenamento dos dados do SafeBin é realizado no serviço da
-[AWS DynamoBD](https://aws.amazon.com/pt/dynamodb), por ser um banco de dados
+[Amazon DynamoBD](https://aws.amazon.com/pt/dynamodb), por ser um banco de dados
 ideal para operações simples. Tudo é feito em uma única tabela declarada no
 arquivo
 [`dynamodb.tf`](https://github.com/FelixLuciano/safe-bin/blob/main/terraform/dynamodb.tf).
@@ -210,7 +210,7 @@ A tabela no recurso
 valor encriptado, e ambas do tipo `string`. Por conta do valor não ser
 indexável, não é necessário declará-lo.
 
-## Cliente KMS
+## Cliente AWS KMS
 
 Os dados que chegam ao SafeBin precisam estar encriptados desde o cliente, então
 quando é solicitada uma requisição de modificação, a função Lambda chama o
@@ -242,11 +242,11 @@ resource "aws_kms_grant" "master_grant" {
 - O recurso `aws_kms_grant` `master_grant` concede o acesso a função
   `lambda_role` aos recursos do KMS.
 
-## Serviço Lambda
+## Serviço AWS Lambda
 
-O [serviço Lambda](https://aws.amazon.com/lambda/) é fundamental para o SafeBin.
-Ele lida com as requisições recebidas por chamas RESTful no API Gateway,
-autentica requisições com o ciente KMS e realiza operações na tabela no
+O serviço [AWS Lambda](https://aws.amazon.com/lambda/) é fundamental para o
+SafeBin. Ele lida com as requisições recebidas por chamas RESTful no API
+Gateway, autentica requisições com o ciente KMS e realiza operações na tabela no
 DynamoDB. Todas as funções das rotas estão declaradas no arquivo
 [`lambda.tf`](https://github.com/FelixLuciano/safe-bin/blob/main/terraform/lambda.tf).
 Por conta de ser um arquivo muito grande, este é um trecho que ilustra todos os
@@ -255,6 +255,8 @@ recursos utilizados.
 ::: windows-group
 
 ```hcl [lambda.tf]
+...
+
 data "archive_file" "api_view_lambda_data_key_modify" {
   type        = "zip"
   source_file = "../src/data_key_modify.py"
@@ -303,7 +305,11 @@ resource "aws_lambda_permission" "api_invoke_view_data_key_modify" {
   principal     = "apigateway.amazonaws.com"
   function_name = aws_lambda_function.api_view_data_key_modify.function_name
 }
+
+...
 ```
+
+:::
 
 - O arquivo zipado
   [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file)
@@ -320,8 +326,6 @@ resource "aws_lambda_permission" "api_invoke_view_data_key_modify" {
 - O recurso
   [`aws_lambda_function`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)
   `api_view_data_key_modify` cria a função Lambda.
-
-:::
 
 ::: info Informação adicional
 
@@ -343,4 +347,94 @@ média 4 segundos para a operação ser realzada.
 
 ## Serviço API Gateway
 
-To do.
+O Serviço [AWS API Gateway](https://aws.amazon.com/api-gateway/) é responsável
+invocar e retornar as respostas das funções Lambda as requisições dos clientes.
+Isso é feito a partir da definição de diversas rotas em uma API REST neste
+serviço.
+
+::: windows-group
+
+```hcl [api-gateway.tf]
+resource "aws_api_gateway_rest_api" "api" {
+  name = "safebin-api"
+}
+
+...
+
+resource "aws_api_gateway_resource" "api_resource_data_key" {
+  rest_api_id = aws_api_gateway_rest_api.api.id
+  parent_id   = aws_api_gateway_resource.api_resource_data.id
+  path_part   = "{key_id}"
+}
+
+resource "aws_api_gateway_method" "api_method_data_key_modify" {
+  for_each = toset(["PUT", "DELETE"])
+
+  rest_api_id   = aws_api_gateway_rest_api.api.id
+  resource_id   = aws_api_gateway_resource.api_resource_data_key.id
+  http_method   = each.value
+  authorization = "NONE"
+
+  request_parameters = {
+    "method.request.path.key_id" = true
+  }
+}
+
+resource "aws_api_gateway_integration" "api_view_data_key_modify" {
+  for_each = toset(["PUT", "DELETE"])
+
+  rest_api_id = aws_api_gateway_rest_api.api.id
+  resource_id = aws_api_gateway_resource.api_resource_data_key.id
+  http_method = aws_api_gateway_method.api_method_data_key_modify[each.key].http_method
+  depends_on  = [aws_lambda_function.api_view_data_key_modify]
+
+  integration_http_method = "POST"
+  type                    = "AWS_PROXY"
+  uri                     = aws_lambda_function.api_view_data_key_modify.invoke_arn
+}
+
+...
+
+resource "aws_api_gateway_deployment" "production" {
+  rest_api_id = aws_api_gateway_rest_api.api.id
+
+  depends_on = [
+    aws_api_gateway_integration.api_view_data,
+    aws_api_gateway_integration.api_view_data_key_access,
+    aws_api_gateway_integration.api_view_data_key_modify,
+  ]
+}
+
+resource "aws_api_gateway_stage" "production" {
+  rest_api_id   = aws_api_gateway_rest_api.api.id
+  deployment_id = aws_api_gateway_deployment.production.id
+  stage_name    = "production"
+}
+
+output "api_endpoint" {
+  value = "${aws_api_gateway_deployment.production.invoke_url}${aws_api_gateway_stage.production.stage_name}"
+}
+```
+
+:::
+
+- O recurso
+  [`aws_api_gateway_rest_api`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_rest_api)
+  `api` cria uma API REST no API Gateway;
+- O recurso `aws_api_gateway_resource` `api_resource_data_key` cria um endpoint
+  na API;
+- O recurso
+  [`aws_api_gateway_method`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_method)
+  `api_method_data_key_modify` cria um método de requisição ao endpoint;
+- O recurso
+  [`aws_api_gateway_integration`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_integration)
+  `api_view_data_key_modify` cria uma integração entre o método do endpoint com
+  uma função Lambda;
+- O recurso
+  [`aws_api_gateway_deployment`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_deployment)
+  `production` Cria um _deploy_ da API REST;
+- O recurso
+  [`aws_api_gateway_stage`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_stage)
+  `production` Publica a API REST;
+- A saída `api_endpoint` Exibe no final da saída do comando `apply` a URL do
+  ambiente de produção.
