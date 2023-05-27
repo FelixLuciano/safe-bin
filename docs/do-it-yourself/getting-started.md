@@ -93,7 +93,7 @@ Docker é uma plataforma de código aberto que permite a criação, implantaçã
 
 Existem várias maneiras de instalar o Docker, mas uma forma geral de fazê-lo é a partir do [tutorial oficial](https://www.docker.com/get-started) específico para seu sistema operacional no site oficial do Docker
 
-Após a instalação, já é possível fazer construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquivo do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte comando:
+Após a instalação e com o terminal na pasta do projeto, já é possível fazer construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquivo do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte comando:
 
 ::: windows-group
 
