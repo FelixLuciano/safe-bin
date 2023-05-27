@@ -20,11 +20,13 @@ export default defineConfig({
     nav: [
       {
         text: 'App',
-        link: '/app/'
+        link: '/app/',
+        activeMatch: '/app/'
       }, 
       {
         text: 'API',
-        link: '/api/'
+        link: '/api/',
+        activeMatch: '/api/'
       }, {
         text: 'Sobre',
         link: '/sobre'
@@ -114,8 +116,11 @@ export default defineConfig({
               text: 'Primeiros passos',
               link: '/do-it-yourself/getting-started'
             }, {
-              text: 'Infraestrutura como Código',
-              link: '/do-it-yourself/deploy'
+              text: 'Implantação',
+              link: '/do-it-yourself/deployment'
+            }, {
+              text: 'Processamento',
+              link: '/do-it-yourself/processing'
             }
           ]
         }

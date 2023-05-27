@@ -1,11 +1,11 @@
 ---
-title: IaC
+title: Implantação
 hero: true
 ---
 
 <VPDocHero
   class="VPDocHero"
-  name="IaC"
+  name="Implantação"
   text="Infraestrutura como Código"
   tagline="e gerenciamento declarativo"
   image="/image/fluentui-emoji/building-construction-3d.png"
