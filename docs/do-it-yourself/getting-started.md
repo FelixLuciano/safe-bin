@@ -89,11 +89,25 @@ operacional.
 
 ### Docker
 
-Docker é uma plataforma de código aberto que permite a criação, implantação e execução de aplicativos em contêineres. Os contêineres são como máquinas virtuais leves que permitem que os desenvolvedores embalem e distribuam facilmente seus aplicativos junto com todas as dependências necessárias. Isso garante que o aplicativo funcione de forma consistente em qualquer ambiente, independentemente de diferenças entre sistemas operacionais ou configurações. O Docker será utilizado com uma container semelhante ao sistema utilizado na nuvem, para gerar o pacote de bibliotecas que utilizado pelo serviço em produção.
+Docker é uma plataforma de código aberto que permite a criação, implantação e
+execução de aplicativos em contêineres. Os contêineres são como máquinas
+virtuais leves que permitem que os desenvolvedores embalem e distribuam
+facilmente seus aplicativos junto com todas as dependências necessárias. Isso
+garante que o aplicativo funcione de forma consistente em qualquer ambiente,
+independentemente de diferenças entre sistemas operacionais ou configurações. O
+Docker será utilizado a imagem
+[`sam/build-python3.9`](https://gallery.ecr.aws/sam/build-python3.9), que gera
+um container semelhante ao sistema utilizado na nuvem, para gerar o pacote de
+bibliotecas que utilizado pelo serviço em produção.
 
-Existem várias maneiras de instalar o Docker, mas uma forma geral de fazê-lo é a partir do [tutorial oficial](https://www.docker.com/get-started) específico para seu sistema operacional no site oficial do Docker
+Existem várias maneiras de instalar o Docker, mas uma forma geral de fazê-lo é a
+partir do [tutorial oficial](https://www.docker.com/get-started) específico para
+seu sistema operacional no site oficial do Docker
 
-Após a instalação e com o terminal na pasta do projeto, já é possível fazer construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquivo do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte comando:
+Após a instalação e com o terminal na pasta do projeto, já é possível fazer
+construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquivo
+do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte
+comando:
 
 ::: windows-group
 
@@ -103,4 +117,5 @@ $ docker-compose up --build
 
 :::
 
-Agora, o ambiente de desenvolvimento está completo para a criação da infraestrutura na nuvem.
+Agora, o ambiente de desenvolvimento está completo para a criação da
+infraestrutura na nuvem.
