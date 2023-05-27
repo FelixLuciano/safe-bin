@@ -305,24 +305,39 @@ resource "aws_lambda_permission" "api_invoke_view_data_key_modify" {
 }
 ```
 
-- O arquivo zipado [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) `api_view_lambda_data_key_modify` cria o payload do o arquivo python com a função chamada pela rota `PUT|DELETE /dtaa/{key_id}`.
-- O arquivo zipado [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) `api_lambda_layer_cryptography` cria o payload com o diretório criado anteriormente dos pacotes utilizados pela função.
-- O recurso [`aws_lambda_layer_version`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_layer_version) `cryptography` cria o layer para a função Lambda utilizar as bibliotecas python.
-- O recurso [`aws_lambda_function`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) `api_view_data_key_modify` cria a função Lambda.
+- O arquivo zipado
+  [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file)
+  `api_view_lambda_data_key_modify` cria o payload do o arquivo python com a
+  função chamada pela rota `PUT|DELETE /dtaa/{key_id}`.
+- O arquivo zipado
+  [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file)
+  `api_lambda_layer_cryptography` cria o payload com o diretório criado
+  anteriormente dos pacotes utilizados pela função.
+- O recurso
+  [`aws_lambda_layer_version`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_layer_version)
+  `cryptography` cria o layer para a função Lambda utilizar as bibliotecas
+  python.
+- O recurso
+  [`aws_lambda_function`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)
+  `api_view_data_key_modify` cria a função Lambda.
 
 :::
 
 ::: info Informação adicional
 
-Para as funções que operam na base de dados, foi adicionada a dependência do recurso da tabela e a variável de ambiente com o nome dela.
+Para as funções que operam na base de dados, foi adicionada a dependência do
+recurso da tabela e a variável de ambiente com o nome dela.
 
 :::
 
 ::: info Informação adicional
 
-Para as funções que realizam autenticação, foi adicionada a variável de ambiente com o nome identificador da chave mestra. E foi adicionado o layer com as bibliotecas de criptografia para o python.
+Para as funções que realizam autenticação, foi adicionada a variável de ambiente
+com o nome identificador da chave mestra. E foi adicionado o layer com as
+bibliotecas de criptografia para o python.
 
-Também foi necessário aumentar o timeout fa função para 5 segundos. Pois leva em média 4 segundos para a operação ser realzada.
+Também foi necessário aumentar o timeout fa função para 5 segundos. Pois leva em
+média 4 segundos para a operação ser realzada.
 
 :::
 
