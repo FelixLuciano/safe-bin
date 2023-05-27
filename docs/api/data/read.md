@@ -1,6 +1,7 @@
 # Read `/data`
 
-Leitura de múltiplos dados. Retorna uma lista dos dados com base na lista de índices.
+Leitura de múltiplos dados. Retorna uma lista dos dados com base na lista de
+índices.
 
 - Método HTTP: `POST`
 
@@ -12,7 +13,8 @@ Leitura de múltiplos dados. Retorna uma lista dos dados com base na lista de í
 }
 ```
 
-- `keys`: Lista de chaves com valores armazenados no servidor. As chaves que não forem encontradas, não anexarão dados na reposta.
+- `keys`: Lista de chaves com valores armazenados no servidor. As chaves que não
+  forem encontradas, não anexarão dados na reposta.
 
 ## Estrutura da resposta
 

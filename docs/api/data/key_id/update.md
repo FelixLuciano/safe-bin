@@ -1,6 +1,7 @@
 # Update `/data/{key_id}`
 
-Atualiza um dado. Modifica na tabela, no índice `key_id` do parâmetro de rota, o valor de `data` no `body`.
+Atualiza um dado. Modifica na tabela, no índice `key_id` do parâmetro de rota, o
+valor de `data` no `body`.
 
 - Método HTTP: `PUT`
 
@@ -20,7 +21,8 @@ Atualiza um dado. Modifica na tabela, no índice `key_id` do parâmetro de rota,
 }
 ```
 
-- `data` - Valor que deseja-se armazenar, encriptado pela mesma chave do valor atual.
+- `data` - Valor que deseja-se armazenar, encriptado pela mesma chave do valor
+  atual.
 
 - `Authentication` - Cifra utilizada para autenticação, obtida em `GET /key`.
 

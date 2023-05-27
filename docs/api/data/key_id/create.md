@@ -1,6 +1,7 @@
 # Create `/data/{key_id}`
 
-Cria um dado. Escreve na tabela, no índice `key_id` do parâmetro de rota, o valor de `data` no `body`.
+Cria um dado. Escreve na tabela, no índice `key_id` do parâmetro de rota, o
+valor de `data` no `body`.
 
 - Método HTTP: `POST`
 
@@ -16,7 +17,8 @@ Cria um dado. Escreve na tabela, no índice `key_id` do parâmetro de rota, o va
 
 ::: danger Aviso
 
-Caso o valor não esteja encriptado, não será possível autenticação. [Saiba mais](#).
+Caso o valor não esteja encriptado, não será possível autenticação.
+[Saiba mais](#).
 
 :::
 

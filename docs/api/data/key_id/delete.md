@@ -1,6 +1,7 @@
 # Delete `/data/{key_id}`
 
-Exclui um dado. Deleta na tabela, o índice `key_id` do parâmetro de rota e o valor armazenado.
+Exclui um dado. Deleta na tabela, o índice `key_id` do parâmetro de rota e o
+valor armazenado.
 
 - Método HTTP: `DELETE`
 

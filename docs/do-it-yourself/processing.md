@@ -55,8 +55,8 @@ def read_handler(event, context):
 
 O acesso aos dados, em
 [`data_key_access.py`](https://github.com/FelixLuciano/safe-bin/blob/main/src/data_key_access.py),
-é relacionado com a leitura e escrita de valores no banco de dados, é
-feita utilizado o serviço
+é relacionado com a leitura e escrita de valores no banco de dados, é feita
+utilizado o serviço
 [Amazon DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html).
 
 ::: windows-group
@@ -131,10 +131,14 @@ def create_read_handler(event, context):
 
 A modificação aos dados, em
 [`data_key_modify.py`](https://github.com/FelixLuciano/safe-bin/blob/main/src/data_key_modify.py),
-é relacionado com a atualização e remoção de valores no banco de dados, é
-feita utilizado o serviço Amazon DynamoDB e o cliente KMS.
+é relacionado com a atualização e remoção de valores no banco de dados, é feita
+utilizado o serviço Amazon DynamoDB e o cliente KMS.
 
-É utilizado também uma modificação do código [`crypto.py`](https://gist.github.com/tcitry/df5ee377ad112d7637fe7b9211e6bc83) do usuário do GitHub [@tcitry](https://github.com/tcitry) para fazer a encriptação e decriptação AES-256 ECB utilizando a biblioteca [cryptography](https://cryptography.io).
+É utilizado também uma modificação do código
+[`crypto.py`](https://gist.github.com/tcitry/df5ee377ad112d7637fe7b9211e6bc83)
+do usuário do GitHub [@tcitry](https://github.com/tcitry) para fazer a
+encriptação e decriptação AES-256 ECB utilizando a biblioteca
+[cryptography](https://cryptography.io).
 
 ::: windows-group
 
@@ -219,7 +223,8 @@ def update_delete_handler(event, context):
 :::
 
 1. Na linha 20, é feita a consulta do índice na base de dados;
-2. Da linha 40 à 43 é feita a decriptação da chave sifrada, obtendo a chave secreta;
+2. Da linha 40 à 43 é feita a decriptação da chave sifrada, obtendo a chave
+   secreta;
 3. Na linha 45 é feita a verificação da chave secreta com o valor armazenado;
 4. Na linha 49 é feita a verificação da autenticicade da requisição;
 5. Da linha 62 à 66 é feita a atualização do valor na base de dados;

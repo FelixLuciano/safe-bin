@@ -37,7 +37,6 @@ gerenciador de senhas.
     Laboratório de Redes e Supercomputação
 </ImgZoom>
 
-
 ## Agradecimentos
 
 Gostaria de expressar meus sinceros agradecimentos aos professores, bem como aos
