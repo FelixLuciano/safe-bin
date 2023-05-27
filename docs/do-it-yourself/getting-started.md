@@ -10,7 +10,7 @@ prev:
   class="VPDocHero VPDocHero--medium-image"
   name="Tutorial"
   text="Como criar o seu o seu"
-  tagline="E fazer o deploy na AWS"
+  tagline="e fazer o deploy na AWS"
   image="/image/fluentui-emoji/rocket.png"
   :actions="[
     {
