@@ -1,6 +1,6 @@
 ---
 title: Início
-layout: home-doc
+layout: home
 sidebar: false
 aside: false
 
