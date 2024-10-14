@@ -24,7 +24,7 @@ executando alguns comandos. Como o
 [`init`](https://developer.hashicorp.com/terraform/cli/commands/init) para
 inicializar o diretório:
 
-::: windows-group
+::: code-group
 
 ```sh [shell]
 $ cd terraform
@@ -39,7 +39,7 @@ executando
 elaborado um plano de execução com base no estado atual da infraestrutura e a
 infraestrutura programada, que cria o arquivo `terraform.tfstate`:
 
-::: windows-group
+::: code-group
 
 ```sh [shell]
 $ terraform plan -out .tfplan
@@ -51,7 +51,7 @@ Então é preciso apenas executar as ações propostas no plano e construir de f
 a infraestrutura executando
 [`apply`](https://developer.hashicorp.com/terraform/cli/commands/apply):
 
-::: windows-group
+::: code-group
 
 ```sh [shell]
 $ terraform apply ".tfplan"
@@ -78,7 +78,7 @@ Nele, é declarado a versão da interface, as opções do provedor, e é também
 solicitara uma instancia [AWS S3](https://aws.amazon.com/s3/) para o
 [backend do Terraform](https://developer.hashicorp.com/terraform/language/settings/backends/configuration).
 
-::: windows-group
+::: code-group
 
 ```hcl [provider.tf]
 terraform {
@@ -115,7 +115,7 @@ fazê-lo. E a declaração destas permições é realizada no arquivo
 que utiliza o [AWS IAM](https://aws.amazon.com/iam/) para gerenciar as
 permissões dos serviços.
 
-::: windows-group
+::: code-group
 
 ```hcl [iam.tf]
 resource "aws_iam_role" "lambda_role" {
@@ -187,7 +187,7 @@ ideal para operações simples. Tudo é feito em uma única tabela declarada no
 arquivo
 [`dynamodb.tf`](https://github.com/FelixLuciano/safe-bin/blob/main/terraform/dynamodb.tf).
 
-::: windows-group
+::: code-group
 
 ```hcl [dynamodb.tf]
 resource "aws_dynamodb_table" "data" {
@@ -219,7 +219,7 @@ confere com o item no banco de dados. Para isso, é utilizada uma chave mestra
 delcarada no arquivo
 [`kms.tf`](https://github.com/FelixLuciano/safe-bin/blob/main/terraform/kms.tf).
 
-::: windows-group
+::: code-group
 
 ```hcl [kms.tf]
 resource "aws_kms_key" "master_key" {
@@ -252,7 +252,7 @@ DynamoDB. Todas as funções das rotas estão declaradas no arquivo
 Por conta de ser um arquivo muito grande, este é um trecho que ilustra todos os
 recursos utilizados.
 
-::: windows-group
+::: code-group
 
 ```hcl [lambda.tf]
 ...
@@ -352,7 +352,7 @@ invocar e retornar as respostas das funções Lambda as requisições dos client
 Isso é feito a partir da definição de diversas rotas em uma API REST neste
 serviço.
 
-::: windows-group
+::: code-group
 
 ```hcl [api-gateway.tf]
 resource "aws_api_gateway_rest_api" "api" {

@@ -25,7 +25,7 @@ do cliente
 do AWS SDK para python
 [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation).
 
-::: windows-group
+::: code-group
 
 ```py:line-numbers {2-7} [keys.py]
 def read_handler(event, context):
@@ -59,7 +59,7 @@ O acesso aos dados, em
 utilizado o serviço
 [Amazon DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html).
 
-::: windows-group
+::: code-group
 
 ```py:line-numbers {10-11,17,49-54} [data_key_access.py]
 def create_read_handler(event, context):
@@ -140,7 +140,7 @@ do usuário do GitHub [@tcitry](https://github.com/tcitry) para fazer a
 encriptação e decriptação AES-256 ECB utilizando a biblioteca
 [cryptography](https://cryptography.io).
 
-::: windows-group
+::: code-group
 
 ```py:line-numbers {10-12,20,40-43,45,49,62-66,68} [data_key_modify.py]
 def update_delete_handler(event, context):

@@ -69,7 +69,7 @@ usuário. Ao executar o seguinte comando
 ([saber mais](https://docs.aws.amazon.com/cli/latest/reference/configure/index.html))
 são solicitadas as credenciais e instaladas automaticamente:
 
-::: windows-group
+::: code-group
 
 ```sh [Bash]
 $ aws configure
@@ -109,7 +109,7 @@ construir este pacote. Esta etapa é realizada apenas uma vez, enquanto o arquiv
 do pacote estiver disponível no espaço de trabalho. Etão execute o seguinte
 comando:
 
-::: windows-group
+::: code-group
 
 ```sh [Bash]
 $ docker-compose up --build
