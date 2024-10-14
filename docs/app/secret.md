@@ -33,7 +33,7 @@ async function updateSecrets() {
   let response
 
   try {
-    response = await fetch("https://iestsfp9gh.execute-api.us-east-1.amazonaws.com/production/key")
+    response = await fetch("#/production/key")
   }
   catch {
     toast("Algo deu errado!", {

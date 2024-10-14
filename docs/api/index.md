@@ -27,7 +27,7 @@ servidor.
 A URL do ambiente de produção da aplicação pública é a seguinte:
 
 ```css
-https://iestsfp9gh.execute-api.us-east-1.amazonaws.com/production/
+NO LONGER AVAILABLE
 ```
 
 ::: tip Dica

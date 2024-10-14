@@ -1,7 +1,6 @@
 ---
 title: App
 titleTemplate: SafePass
-# sidebar: false
 aside: false
 hero: true
 prev: false
@@ -77,7 +76,7 @@ async function savePassword(data) {
 
   let response
   try {
-    response = await fetch(`https://iestsfp9gh.execute-api.us-east-1.amazonaws.com/production/data/${nextIndex.value}`, {
+    response = await fetch(`#/production/data/${nextIndex.value}`, {
       method: 'POST',
       body: JSON.stringify({
         data: payload
