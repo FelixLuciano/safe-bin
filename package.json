@@ -9,18 +9,18 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@formkit/i18n": "^0.17.2",
-    "@formkit/themes": "^0.17.2",
-    "@formkit/vue": "^0.17.2",
-    "@types/markdown-it": "^12.2.3",
-    "@types/markdown-it-container": "^2.0.5",
-    "@vueuse/core": "^10.1.2",
-    "crypto-js": "^4.1.1",
+    "@formkit/i18n": "^1.6.7",
+    "@formkit/themes": "^1.6.7",
+    "@formkit/vue": "^1.6.7",
+    "@types/markdown-it": "^13.0.9",
+    "@types/markdown-it-container": "^2.0.10",
+    "@vueuse/core": "^11.1.0",
+    "crypto-js": "^4.2.0",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
-    "medium-zoom": "^1.0.8",
-    "nanoid": "^4.0.2",
-    "vitepress": "^1.0.0-rc.44",
+    "medium-zoom": "^1.1.0",
+    "nanoid": "^5.0.7",
+    "vitepress": "^1.4.1",
     "vue3-toastify": "^0.1.11"
   }
 }
